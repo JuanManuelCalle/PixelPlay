@@ -11,12 +11,6 @@ export default function Home() {
     width: '100%',
   };
 
-  const cardItemStyles = {
-    flexBasis: 'calc(25% - 20px)',
-    margin: '10px',
-    width: '100%',
-  };
-
   useEffect(() => {
     getGames()
     .then(res => {
@@ -25,9 +19,8 @@ export default function Home() {
   }, [])
 
   return (
-    <div style={containerStyles}>
-      {/* <CardList style={cardItemStyles} juegos={juegos} /> */}
-      <CardList style={cardItemStyles} juegos={juegos} containerStyles={containerStyles} />
+    <div>
+      <CardList juegos={juegos} containerStyles={containerStyles} />
     </div>
   );
 

@@ -1,0 +1,25 @@
+/* Estilos para la rejilla */
+/* Estilos para la rejilla */
+.card-grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 20px;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: 30% 30%;
+        gap: 20px;
+    }
+  }
+  
+  /* Media query para pantallas medianas */
+  @media (max-width: 768px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+  }

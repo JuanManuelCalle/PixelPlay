@@ -2,11 +2,10 @@ import './CardList.css';
 import CardItem from "../cardItem/CardItem";
 
 
-export const CardList = ({ style,juegos, containerStyles }) => (
-  <div className="item-list" style={containerStyles}>
+export const CardList = ({ juegos, containerStyles }) => (
+  <div className="card-grid ">
     {juegos.map((game) => (
       <CardItem 
-      style= {style}
       key={game.id}
       id={game.id}
       img={game.img}
