@@ -98,12 +98,15 @@
 
 @media (max-width: 768px) {
   .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr)); /* Cards se ajustan automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
   }
 }
 
 @media (max-width: 480px) {
   .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Cards se ajustan automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+  .banner-image {
+    height: 140px;
   }
 }

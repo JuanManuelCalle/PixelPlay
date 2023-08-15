@@ -92,7 +92,11 @@
   .nav-link-a:hover,
   .nav-link-a:visited {
     text-decoration: none;
-    color: #fff;
+    color: white;
+  }
+
+  .fw_nav{
+    color: white;
   }
   
   .nav-link {
@@ -105,7 +109,7 @@
   .nav-link-a:visited,
   .nav-link-a:active {
     text-decoration: none;
-    color: #f857a8;
+    color: white;
   }
   
   .right {
@@ -155,7 +159,11 @@
     .nav-link.active {
       background: rgb(45,48,71);
       background: linear-gradient(38deg, rgba(45,48,71,1) 38%, rgba(65,157,120,1) 60%);
-      color: #fff;
+      color: white;
+    }
+
+    .fw.active{
+      color: white;
     }
   
     .nav-link-span {

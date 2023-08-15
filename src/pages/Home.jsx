@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { getGames } from '../lib/juegos.requests';
+import { cargarData, getGames } from '../lib/juegos.requests';
 import {CardList} from '../components/CardList/CardList';
+import Loader from '../components/loader/loader';
 
 export default function Home() {
   const [juegos, setJuegos] = useState([])
+  const [isLoading, setIsLoading] = useState(true);
 
   const containerStyles = {
     display: 'flex',
@@ -14,13 +16,18 @@ export default function Home() {
   useEffect(() => {
     getGames()
     .then(res => {
+      setIsLoading(false);
       setJuegos(res)
     })
   }, [])
 
   return (
     <div>
-      <CardList juegos={juegos} containerStyles={containerStyles} />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <CardList juegos={juegos} containerStyles={containerStyles} />
+      )}
     </div>
   );
 

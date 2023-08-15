@@ -7,6 +7,7 @@ import { CardList } from '../components/CardList/CardList'
 export default function Category() {
   const {id} = useParams();
   const [juegos, setJuegos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const containerStyles = {
     display: 'flex',
@@ -20,16 +21,18 @@ export default function Category() {
   };
 
   useEffect(() => {
-    getGames(id)
-    .then(res => {
-      setJuegos(res)
+    setJuegos([]);
+    setIsLoading(true);
+    getGames(id).then((res) => {
+      setIsLoading(false);
+      setJuegos(res);
     })
   }, [id])
 
   return (
     <div style={containerStyles}>
       {/* <CardList style={cardItemStyles} juegos={juegos} /> */}
-      <CardList style={cardItemStyles} juegos={juegos} containerStyles={containerStyles} />
+      <CardList style={cardItemStyles} juegos={juegos} containerStyles={containerStyles} loading={isLoading} />
     </div>
   );
 }

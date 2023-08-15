@@ -1,0 +1,47 @@
+.item-count{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: max-content;
+    align-items: center;
+}
+.item-count__buttons{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.item-count__buttons .btn_min{
+    background: rgba(65,157,120,1);
+    padding: 8px;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+}
+.item-count__buttons span {
+    font-size: 20px;
+    width: 25px;
+}
+.item_count_btn{
+    padding: 8px 16px;
+    background: rgba(45,48,71,1);
+    max-width: 300px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.item_count_btn:hover{
+    background: linear-gradient(38deg, rgba(45,48,71,1) 38%, rgba(65,157,120,1) 60%);
+    transition: all 1s ease-in-out;
+}
+.item_count_add:disabled{
+    padding: 8px 16px;
+    background: #494b63;
+    max-width: 300px;
+    border-radius: 8px;
+    color: white;
+}

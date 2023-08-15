@@ -74,60 +74,6 @@ font-family: 'EB Garamond', serif;
 	left: 22.8%;
 	
 }
-.btn_card_detalle {
-
-	transform: translateY(0px);
-	transition: 0.3s linear;
-	background:  #247BA0;
-	border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-	cursor: pointer;
-	outline: none;
-	border: none;
-	color: #eee;
-	padding: 0;
-	margin: 0;
-	
-}
-
-.btn_card_detalle:hover{transform: translateY(-6px);
-	background: #37abdd;}
-
-.btn_card_detalle span {
-	font-family: 'Farsan', cursive;
-	transition: transform 0.3s;
-	display: inline-block;
-  padding: 10px 20px;
-	font-size: 1.2em;
-	margin:0;
-	
-}
-.btn_card_detalle .price, .shopping-cart{
-	background: #333;
-	border: 0;
-	margin: 0;
-}
-
-.btn_card_detalle .price {
-	transform: translateX(-10%); padding-right: 15px;
-}
-
-.btn_card_detalle .shopping-cart {
-	transform: translateX(-100%);
-  position: absolute;
-	background: #333;
-	z-index: 1;
-  left: 0;
-  top: 0;
-}
-
-.btn_card_detalle .buy {z-index: 3; font-weight: bolder;}
-
-.btn_card_detalle:hover .price {transform: translateX(-110%);}
-
-.btn_card_detalle:hover .shopping-cart {transform: translateX(0%);}
-
 
 
 .product-image {

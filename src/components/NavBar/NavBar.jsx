@@ -1,9 +1,8 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
 import './NavBar.css';
-import { FaOpencart} from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import logo from '/public/logo.png';
+import CartWidget from '../CartWidget/CartWidget';
 
 export default function NavBar() {
   return (
@@ -57,11 +56,8 @@ export default function NavBar() {
               </div>
             </NavLink>
 
-            <div className="nav-link">
-              <div className="nav-link-span">
-                <div className="u-nav"><FaOpencart /></div>
-              </div>
-            </div>
+            {/* CART */}
+            <CartWidget />
 
           </div>
         </nav>
