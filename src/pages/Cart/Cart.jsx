@@ -21,8 +21,6 @@ export default function Cart() {
 
     if (!form.email) {
       errores.email = 'Debe ingresar un correo electrónico.';
-    } else if (!isValidEmail(form.email)) {
-      errores.email = 'El correo electrónico no es válido.';
     }
 
     if (!form.emailConfirmacion) {
@@ -65,6 +63,11 @@ export default function Cart() {
     console.log("Cart" + cart);
 
     const {name, email, telefono, direccion} = form;
+
+    if (!isValidEmail(email)) {
+      toast.error('El correo electrónico no es válido.', { position: 'top-right' });
+      return;
+    }
 
     if (email !== form.emailConfirmacion) {
       toast.error('Los correos electrónicos no coinciden.', { position: 'top-right' });
