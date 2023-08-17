@@ -276,3 +276,14 @@ label {
     flex-direction: column;
     margin-right: 20px; /* Espacio entre los campos */
   }
+
+.btn_toast{
+    border: none;
+    background: rgba(65,157,120,1);
+    border-radius: 20px;
+    color: white;
+}
+
+.colorW{
+    color: white;
+}
